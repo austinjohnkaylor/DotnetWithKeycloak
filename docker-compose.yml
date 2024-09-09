@@ -1,0 +1,6 @@
+﻿services:
+  keycloak.auth.api:
+    image: keycloak.auth.api
+    build:
+      context: .
+      dockerfile: KeyCloak.Auth.API/Dockerfile

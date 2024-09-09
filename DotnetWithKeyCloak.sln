@@ -1,8 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyCloak.Auth.API", "KeyCloak.Auth.API\KeyCloak.Auth.API.csproj", "{DEE39759-6005-4B30-8DC5-C573BF2D993A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2F1EF8B-D407-4F06-9511-6BA4A2777671}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEE39759-6005-4B30-8DC5-C573BF2D993A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE39759-6005-4B30-8DC5-C573BF2D993A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE39759-6005-4B30-8DC5-C573BF2D993A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE39759-6005-4B30-8DC5-C573BF2D993A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
