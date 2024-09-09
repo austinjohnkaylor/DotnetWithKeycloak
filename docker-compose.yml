@@ -4,3 +4,17 @@
     build:
       context: .
       dockerfile: KeyCloak.Auth.API/Dockerfile
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: KeyCloak
+    command:
+      - "start-dev"
+    environment:
+      - KC_HEALTH_ENABLED=true
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+    volumes: 
+        - ./.containers/identity:/opt/keycloak/data # persists keycloak data
+    ports:
+      - "8080:8080"
