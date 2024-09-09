@@ -4,17 +4,21 @@
     build:
       context: .
       dockerfile: KeyCloak.Auth.API/Dockerfile
+    container_name: DotnetWithKeyCloak-Auth.API
+    ports:
+      - "5000:8080"
+      - "5001:8081"
 
   keycloak:
     image: quay.io/keycloak/keycloak:latest
-    container_name: KeyCloak
+    container_name: DotnetWithKeyCloak-KeyCloak
     command:
       - "start-dev"
     environment:
       - KC_HEALTH_ENABLED=true
-      - KEYCLOAK_USER=admin
-      - KEYCLOAK_PASSWORD=admin
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
     volumes: 
         - ./.containers/identity:/opt/keycloak/data # persists keycloak data
     ports:
-      - "8080:8080"
+      - "18080:8080"
